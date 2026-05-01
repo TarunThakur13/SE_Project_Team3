@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="College Dispensary – Book doctor appointments, manage prescriptions and pharmacy records online." />
+  <title>College Dispensary | Appointment System</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="/styles/global.css" />
+
+  <!-- React (development CDN – swap for production build) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel Standalone – compiles JSX in-browser -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Chart.js for Admin reports -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  
+  <!-- jsPDF for automatic bill generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Load all JSX modules (order matters: dependencies first) -->
+  <script type="module" src="/styles/styles.js"></script>
+  <script type="module" src="/services/api.js"></script>
+  <script type="module" src="/services/mailer.js"></script>
+  <script type="module" src="/components/Modal.jsx"></script>
+  <script type="module" src="/components/Sidebar.jsx"></script>
+
+  <!-- Patient pages -->
+  <script type="module" src="/pages/Patient/BookAppointment.jsx"></script>
+  <script type="module" src="/pages/Patient/MyAppointments.jsx"></script>
+  <script type="module" src="/pages/Patient/MyPrescriptions.jsx"></script>
+  <script type="module" src="/pages/Patient/PatientDashboard.jsx"></script>
+
+  <!-- Doctor pages -->
+  <script type="module" src="/pages/Doctor/PrescriptionForm.jsx"></script>
+  <script type="module" src="/pages/Doctor/AppointmentRequests.jsx"></script>
+  <script type="module" src="/pages/Doctor/TodayAppointments.jsx"></script>
+  <script type="module" src="/pages/Doctor/DoctorDashboard.jsx"></script>
+
+  <!-- Pharmacist pages -->
+  <script type="module" src="/pages/Pharmacist/PendingPrescriptions.jsx"></script>
+  <script type="module" src="/pages/Pharmacist/AllRecords.jsx"></script>
+  <script type="module" src="/pages/Pharmacist/InventoryRequest.jsx"></script>
+  <script type="module" src="/pages/Pharmacist/PharmacistDashboard.jsx"></script>
+
+  <!-- Admin pages -->
+  <script type="module" src="/pages/Admin/ManageDoctors.jsx"></script>
+  <script type="module" src="/pages/Admin/ManageInventory.jsx"></script>
+  <script type="module" src="/pages/Admin/InventoryRequests.jsx"></script>
+  <script type="module" src="/pages/Admin/Reports.jsx"></script>
+  <script type="module" src="/pages/Admin/AdminDashboard.jsx"></script>
+
+  <!-- Root pages + app router -->
+  <script type="module" src="/pages/Login.jsx"></script>
+  <script type="module" src="/app.jsx"></script>
+</body>
+</html>
