@@ -1,7 +1,8 @@
 # Dependencies
 node_modules/
 
-# Environment variables
+# Uploads
+server/uploads/
 
 # Logs
 logs
